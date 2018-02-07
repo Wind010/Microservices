@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[StateProvince]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,  
+	[Name] NVARCHAR(100) NOT NULL,
+    [Code] NCHAR(3) NOT NULL, 
+    [Country] NVARCHAR(60) NOT NULL
+)

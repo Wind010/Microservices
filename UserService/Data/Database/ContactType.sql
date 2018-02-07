@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[ContactType]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,  
+	[Name] NVARCHAR(100) NOT NULL,
+    [Description] NVARCHAR(1000) NULL
+)

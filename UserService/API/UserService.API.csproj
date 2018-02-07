@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <AssemblyName>UserService.API</AssemblyName>
+    <RootNamespace>Services.User</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
+    <PackageReference Include="Autofac.Extras.NLog" Version="1.3.0" />
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="NLog" Version="5.0.0-beta10" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.4.1" />
+    <PackageReference Include="RawRabbit" Version="1.10.4" />
+    <PackageReference Include="RawRabbit.DependencyInjection.Autofac" Version="1.10.4" />
+    <PackageReference Include="RawRabbit.Logging.NLog" Version="1.10.4" />
+    <PackageReference Include="RawRabbit.vNext" Version="1.10.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Repository\UserRepository.csproj" />
+    <ProjectReference Include="..\Model\User.RestModel.csproj" />
+    <ProjectReference Include="..\Processor\UserProcessor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="nLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="rawrabbit.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

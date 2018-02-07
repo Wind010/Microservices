@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Note]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,  
+	[UserId] INT NOT NULL, 
+    [Notes] NVARCHAR(MAX) NOT NULL,
+	CONSTRAINT [FK_Notes_User] FOREIGN KEY ([UserId]) REFERENCES [User]([Id])
+)

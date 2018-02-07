@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Services.User.Processor</AssemblyName>
+    <RootNamespace>Services.User.Processor</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="NLog" Version="5.0.0-beta10" />
+    <PackageReference Include="RawRabbit" Version="1.10.4" />
+    <PackageReference Include="RawRabbit.DependencyInjection.Autofac" Version="1.10.4" />
+    <PackageReference Include="RawRabbit.Logging.NLog" Version="1.10.4" />
+    <PackageReference Include="RawRabbit.vNext" Version="1.10.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Repository\UserRepository.csproj" />
+  </ItemGroup>
+
+</Project>
